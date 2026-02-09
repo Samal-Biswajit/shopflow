@@ -3,7 +3,7 @@ import { useEffect,useState } from 'react';
 
 import { Header } from "../components/Header";
 
-import { formatMoney } from '../utils/money,js';
+import { formatMoney } from '../utils/money';
 
 import "./HomePage.css";
 
@@ -13,7 +13,7 @@ export function HomePage({cart}) {
 
  
   useEffect(()=>{
-    axios.get('/api/products')
+    axios.get('/api/products?expand=estimated')
       .then((response) => {
         setProducts(response.data);
       });            
