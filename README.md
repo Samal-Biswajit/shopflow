@@ -51,7 +51,7 @@ A full-stack e-commerce web application built with **React 19** and **Express.js
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/shopflow.git
+git clone https://github.com/Samal-Biswajit/shopflow.git
 cd shopflow
 ```
 
