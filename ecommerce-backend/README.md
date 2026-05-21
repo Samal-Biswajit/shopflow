@@ -1,17 +1,42 @@
-## Intro to the Project
-This is the backend for the [ecommerce-project](https://github.com/SuperSimpleDev/ecommerce-project).
-- 95% of the code was generated with AI.
+# ShopFlow — Backend
 
-## Video Tutorials
-**Part 1 - Create the Backend:** https://youtu.be/vBprybSmJs8
+The Express.js REST API backend for ShopFlow, using **Sequelize ORM** with **SQLite**.
 
-## Set up this backend
-1. Make sure you have NodeJS installed (version 22+). If not, [click here to install](https://nodejs.org/).
-2. Download this code by clicking the green `Code` button (in the top-right) > Click `Download Zip`.
-3. Unzip the code. On Windows, right-click the zip file > `Extract All`. On Mac, double-click the zip file.
-4. Open this code in VSCode.
-5. At the top menu of VSCode, click `Terminal` > `New Terminal`.
-6. In the Terminal, run `npm install`, and run `npm run dev`.
+## Setup
+
+1. Make sure you have [Node.js](https://nodejs.org/) v22+ installed.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The server will start on `http://localhost:8080`.
+
+## Data Models
+
+| Model | Description |
+|---|---|
+| `Product` | Product catalog (name, price, image, rating) |
+| `CartItem` | Shopping cart items linked to products |
+| `DeliveryOption` | Shipping speed & pricing options |
+| `Order` | Placed orders with order items |
+
+## API Routes
+
+- `GET /api/products` — Fetch all products
+- `GET/POST/PUT/DELETE /api/cart-items` — Cart CRUD operations
+- `GET /api/delivery-options` — Available delivery options
+- `GET /api/payment-summary` — Order cost breakdown
+- `GET/POST /api/orders` — Order management
+- `POST /api/reset` — Reset database to defaults
 
 ## Troubleshooting
-If you run into issues, see the [troubleshooting steps](troubleshooting.md).
+
+See the [troubleshooting guide](troubleshooting.md) for common issues.
+
+## Attribution
+
+Backend based on the [SuperSimpleDev ecommerce project](https://github.com/SuperSimpleDev/ecommerce-project).

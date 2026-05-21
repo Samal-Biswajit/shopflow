@@ -1,12 +1,34 @@
-# React + Vite
+# ShopFlow — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The React frontend for ShopFlow, built with **React 19** and **Vite**.
 
-Currently, two official plugins are available:
+## Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home** — Product catalog with search and add-to-cart functionality
+- **Checkout** — Cart items with delivery option selection and payment summary
+- **Orders** — Order history with item details
+- **Tracking** — Delivery tracking for placed orders
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the dev server |
+| `npm run build` | Build for production |
+| `npm run lint` | Run ESLint |
+| `npx vitest` | Run tests |
+
+## Project Structure
+
+```
+src/
+├── components/        # Shared components (Header)
+├── pages/
+│   ├── home/          # HomePage, Product, ProductsGrid
+│   ├── checkout/      # CheckoutPage, DeliveryOptions, OrderSummary, PaymentSummary
+│   ├── orders/        # OrdersPage
+│   └── TrackingPage   # Delivery tracking
+├── utils/             # Helper functions (money formatting)
+├── App.jsx            # Root component with routing
+└── main.jsx           # Entry point
+```
